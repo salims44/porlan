@@ -39,12 +39,6 @@ async function sendToDiscord(message, webhookUrl) {
   }
 }
 
-function sendStatusUpdate() {
-  setInterval(async () => {
-    const message = 'The script is still running...';
-    await sendToDiscord(message, statusWebhookUrl);
-  }, 300000);
-}
 
 async function generateAndCheckWallets() {
   let checkCount = 0;
@@ -67,6 +61,9 @@ async function generateAndCheckWallets() {
     checkCount++;
     if (checkCount % 20 === 0) {
       console.log(`Checked ${checkCount} wallets so far...`);
+      
+      const discordMessage = `Checked ${checkCount} wallets so far...`;
+      await sendToDiscord(discordMessage, statusWebhookUrl);
     }
 
     await new Promise(resolve => setTimeout(resolve, 50));
