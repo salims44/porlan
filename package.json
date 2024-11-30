@@ -1,0 +1,23 @@
+{
+  "name": "walletgen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wallet",
+    "seed phrase",
+    "ethers.js",
+    "bip39"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "A wallet generation tool that creates random seed phrases and derives Ethereum wallet addresses.",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "bip39": "^3.1.0",
+    "ethers": "^6.13.4"
+  }
+}
