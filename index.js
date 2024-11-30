@@ -71,5 +71,4 @@ async function generateAndCheckWallets() {
 }
 
 keepAlive();
-sendStatusUpdate();
 generateAndCheckWallets();
